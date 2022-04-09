@@ -35,7 +35,7 @@ class Exp(MyExp):
         self.warmup_lr = 0
         self.basic_lr_per_img = 0.01 / 64.0
         self.scheduler = "yoloxwarmcos"
-        self.no_aug_epochs = 15
+        self.no_aug_epochs = 30
         self.min_lr_ratio = 0.05
         self.ema = True
 
@@ -69,7 +69,7 @@ class Exp(MyExp):
         with wait_for_the_master(local_rank):
             dataset = VOCDetection(
                 data_dir=os.path.join(get_yolox_datadir(), "VOCdevkit"),
-                image_sets=[('2024', 'trainval')],
+                image_sets=[('2025', 'train')],
                 img_size=self.input_size,
                 preproc=TrainTransform(
                     max_labels=50,
@@ -127,7 +127,7 @@ class Exp(MyExp):
 
         valdataset = VOCDetection(
             data_dir=os.path.join(get_yolox_datadir(), "VOCdevkit"),
-            image_sets=[('2024', 'val')],
+            image_sets=[('2025', 'val')],
             img_size=self.test_size,
             preproc=ValTransform(legacy=legacy),
         )

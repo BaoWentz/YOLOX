@@ -1,5 +1,5 @@
 exp_name='voc_ocr_flip'
-out_name='yolox_flip1'
+out_name='voc_ocr_flip'
 
 python tools/export_onnx.py \
 -c /home/ecnu-lzw/bwz/ocr-gy/YOLOX/YOLOX_outputs/${exp_name}/best_ckpt.pth \
