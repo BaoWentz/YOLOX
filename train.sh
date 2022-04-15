@@ -1,4 +1,4 @@
-exp_name='voc_ocr_flip_2025'
+exp_name='voc_ocr_box_2026'
 
 python tools/train.py \
 -f /home/ecnu-lzw/bwz/ocr-gy/YOLOX/myconfig/${exp_name}.py \
