@@ -21,7 +21,7 @@ from yolox.utils import fuse_model, get_model_info, postprocess, vis
 COCO_CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
            'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-           'u', 'v', 'w', 'x', 'y', 'z', '-', '&', 'box', '%']
+           'u', 'v', 'w', 'x', 'y', 'z', '-', '&', 'box_+', 'box_-']
 
 IMAGE_EXT = [".jpg", ".jpeg", ".webp", ".bmp", ".png"]
 
