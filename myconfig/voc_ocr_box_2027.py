@@ -69,7 +69,7 @@ class Exp(MyExp):
         with wait_for_the_master(local_rank):
             dataset = VOCDetection(
                 data_dir=os.path.join(get_yolox_datadir(), "VOCdevkit"),
-                image_sets=[('2026', 'train')],
+                image_sets=[('2027', 'train')],
                 img_size=self.input_size,
                 preproc=TrainTransform(
                     max_labels=50,
@@ -127,7 +127,7 @@ class Exp(MyExp):
 
         valdataset = VOCDetection(
             data_dir=os.path.join(get_yolox_datadir(), "VOCdevkit"),
-            image_sets=[('2026', 'val')],
+            image_sets=[('2027', 'val')],
             img_size=self.test_size,
             preproc=ValTransform(legacy=legacy),
         )

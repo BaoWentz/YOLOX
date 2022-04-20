@@ -1,4 +1,4 @@
-exp_name='voc_ocr_box_2026'
+exp_name='voc_ocr_box_2028'
 
 python tools/train.py \
 -f /home/ecnu-lzw/bwz/ocr-gy/YOLOX/myconfig/${exp_name}.py \
@@ -7,7 +7,7 @@ python tools/train.py \
 # --cache
 
 # /home/ecnu-lzw/bwz/ocr-gy/YOLOX/train.sh
-# tensorboard --logdir='/home/ecnu-lzw/bwz/ocr-gy/YOLOX/YOLOX_outputs/voc_ocr_flip_2025'
+# tensorboard --logdir='/home/ecnu-lzw/bwz/ocr-gy/YOLOX/YOLOX_outputs/voc_ocr_box_2028'
 
 # tmux new -s bwz
 # tmux detach  //离开终端后台运行

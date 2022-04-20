@@ -204,8 +204,9 @@ def image_demo(predictor, vis_folder, path, current_time, save_result):
             save_folder = os.path.join(
                 vis_folder, time.strftime("%Y_%m_%d_%H_%M_%S", current_time)
             )
-            os.makedirs(save_folder, exist_ok=True)
-            save_file_name = os.path.join(save_folder, os.path.basename(image_name))
+            save_img_folder = os.path.join(save_folder, 'render_imgs')
+            os.makedirs(save_img_folder, exist_ok=True)
+            save_file_name = os.path.join(save_img_folder, os.path.basename(image_name))
             logger.info("Saving detection result in {}".format(save_file_name))
             cv2.imwrite(save_file_name, result_image)
 
@@ -221,7 +222,9 @@ def image_demo(predictor, vis_folder, path, current_time, save_result):
             det_log = ''
             for i in range(len(cls)):
                 det_log += f'{COCO_CLASSES[int(cls[i])]} {scores[i]:.4f} {" ".join([str(int(x)) for x in bboxes[i]])}\n'
-            txt_path = Path(save_file_name).with_suffix('.txt')
+            save_txt_folder = os.path.join(save_folder, 'yolos')
+            os.makedirs(save_txt_folder, exist_ok=True)
+            txt_path = Path(save_txt_folder) / Path(save_file_name).with_suffix('.txt').name
             txt_path.write_text(det_log, encoding='utf8')
 
         ch = cv2.waitKey(0)

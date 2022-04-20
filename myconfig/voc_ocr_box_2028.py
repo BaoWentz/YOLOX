@@ -41,7 +41,7 @@ class Exp(MyExp):
 
         self.weight_decay = 5e-4
         self.momentum = 0.9
-        self.print_interval = 5
+        self.print_interval = 30
         self.eval_interval = 10
         self.exp_name = os.path.split(os.path.realpath(__file__))[1].split(".")[0]
 
@@ -69,7 +69,7 @@ class Exp(MyExp):
         with wait_for_the_master(local_rank):
             dataset = VOCDetection(
                 data_dir=os.path.join(get_yolox_datadir(), "VOCdevkit"),
-                image_sets=[('2026', 'train')],
+                image_sets=[('2028', 'trainval')],
                 img_size=self.input_size,
                 preproc=TrainTransform(
                     max_labels=50,
@@ -127,7 +127,7 @@ class Exp(MyExp):
 
         valdataset = VOCDetection(
             data_dir=os.path.join(get_yolox_datadir(), "VOCdevkit"),
-            image_sets=[('2026', 'val')],
+            image_sets=[('2028', 'val')],
             img_size=self.test_size,
             preproc=ValTransform(legacy=legacy),
         )
