@@ -1,5 +1,5 @@
-exp_name='voc_ocr_box_2028'
-out_name='voc_ocr_box_2028'
+exp_name='voc_m_box_2001'
+out_name='voc_m_box_2001'
 
 python tools/export_onnx.py \
 -c /home/ecnu-lzw/bwz/ocr-gy/YOLOX/YOLOX_outputs/${exp_name}/best_ckpt.pth \

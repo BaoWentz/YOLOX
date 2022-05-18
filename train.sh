@@ -1,9 +1,9 @@
-exp_name='voc_ocr_box_2028'
+exp_name='voc_m_box_2001'
 
 python tools/train.py \
 -f /home/ecnu-lzw/bwz/ocr-gy/YOLOX/myconfig/${exp_name}.py \
 -d 2 -b 64 --fp16 -o \
--c /home/ecnu-lzw/bwz/ocr-gy/YOLOX/YOLOX_outputs/voc_ocr_2023/best_ckpt.pth \
+-c /home/ecnu-lzw/bwz/ocr-gy/YOLOX/YOLOX_outputs/voc_m_box_2028/best_ckpt.pth \
 # --cache
 
 # /home/ecnu-lzw/bwz/ocr-gy/YOLOX/train.sh
